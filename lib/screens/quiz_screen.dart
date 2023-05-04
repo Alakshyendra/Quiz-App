@@ -52,7 +52,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 ],
               ),
             ),
-            {Provider.of<QuizQuestion>(context, listen: false).type} ==
+            Provider.of<QuizQuestion>(context, listen: false).type ==
                     'multiple'
                 ? SizedBox(
                     height: MediaQuery.of(context).size.height * 0.8,
@@ -359,9 +359,9 @@ class _QuizScreenState extends State<QuizScreen> {
                                                               currentScore--;
                                                             }
                                                             //TODO: Navigate to result page and pass the score into firebase
-                                                            if (snapshot.data!.docs[0]['score'] < currentScore) {
-                                                              FirebaseFirestore.instance.collection('high-score').snapshots().
-                                                            }
+                                                            //if (snapshot.data!.docs[0]['score'] < currentScore) {
+                                                              //FirebaseFirestore.instance.collection('high-score').snapshots().
+                                                            //}
                                                             FirebaseFirestore
                                                                 .instance
                                                                 .collection(

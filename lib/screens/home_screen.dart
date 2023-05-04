@@ -14,9 +14,9 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.grey[300],
         onPressed: () async {
           var highScore = FirebaseFirestore.instance.collection('high-score').snapshots();
-          if (highScore[0])
+          //if (highScore[0])
           print(highScore);
-          // Navigator.pushNamed(context, '/options');
+          Navigator.pushNamed(context, '/options');
         },
         label: Text(
           'Start Quiz',
@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                       horizontal: 50.0, vertical: 10),
                   child: Text(
                     "Welcome to my Quiz App",
-                    style: GoogleFonts.robotoMono(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.orbitron(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.center,
                   ),
                 ),
